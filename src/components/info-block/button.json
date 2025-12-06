@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_info_block_buttons",
+  "info": {
+    "displayName": "button"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "string",
+      "regex": "^[a-z0-9_-]+$",
+      "required": true
+    }
+  }
+}
