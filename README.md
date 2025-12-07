@@ -104,23 +104,38 @@ npm run start    # Start without auto-reload
 npm run strapi   # Access Strapi CLI commands
 ```
 
-## 👥 Team Setup
+## 🔄 Cloning This Project
 
-When someone else clones this project:
+If you want to clone and use this project:
 
-1. They run `npm install` and `npm run develop`
-2. On first launch, they create their **own local admin account**
-3. The SQLite database is created fresh (empty)
-4. They need to manually add content OR import existing data
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Drutten/gallery-strapi.git
+   cd gallery-strapi
+   ```
 
-**Note:** No Strapi Cloud account is required for local development. Each developer has their own local database and admin account.
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-### Sharing Content Between Developers
+3. **Set up environment:**
+   ```bash
+   cp .env.example .env
+   ```
 
-To share content structure and data:
-- Use the **Strapi Import/Export** plugin (install separately)
-- OR export/import the SQLite database file manually
-- OR use a shared database (PostgreSQL/MySQL) instead of SQLite
+4. **Start Strapi:**
+   ```bash
+   npm run develop
+   ```
+
+5. **Create your admin account** when prompted at `http://localhost:1337/admin`
+
+6. **Configure API permissions** (Settings → Roles → Public → Info-block → enable `find` and `findOne`)
+
+7. **Add your own content** through the Content Manager
+
+**Note:** The database starts empty - you'll need to create your own InfoBlocks and upload your own images.
 
 ## ⚙️ Deployment
 
